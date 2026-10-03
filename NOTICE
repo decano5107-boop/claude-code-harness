@@ -1,0 +1,52 @@
+Claude Code Harness
+Copyright 2026 Diego Cano
+
+Includes the Spec & Verify plugin (spec skill, verify-spec command, spec-critic
+agent, guardrails hook), Copyright 2026 Diego Cano, also Apache-2.0, merged into
+this repository.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+--------------------------------------------------------------------------------
+THIRD-PARTY ATTRIBUTIONS AND NON-AFFILIATION
+
+Claude Code is a product of Anthropic. This project is a community set of hooks
+for it and is not an Anthropic product.
+
+Amazon Web Services and AWS are trademarks of Amazon.com, Inc. or its affiliates.
+They are named only to describe what aws_readonly_guard.py inspects. The account
+IDs 111122223333 and 444455556666 used in examples and tests are the placeholder
+IDs from AWS documentation.
+
+CODE_OF_CONDUCT.md is adapted from the Contributor Covenant, version 2.1
+(https://www.contributor-covenant.org), licensed CC BY 4.0.
+
+Other product names in the code (for example data platforms listed as context words) are used
+only descriptively. No third-party trademarks, logos, or brand assets are distributed with
+this project.
+
+THE SPEC SKILL, VERIFIER AND GUARDRAIL HOOK (formerly the Spec & Verify plugin)
+
+The method these implement is described in this project's own words in
+skills/spec/reference/method.md. It draws on ideas Andrej Karpathy has published;
+this project is NOT affiliated with, endorsed by, sponsored by, or reviewed by him.
+His name appears solely to credit where those ideas came from. The sources are
+cited, paraphrased and not reproduced:
+
+  Andrej Karpathy, "Animals vs Ghosts"
+  https://karpathy.bearblog.dev/animals-vs-ghosts/
+
+  Andrej Karpathy, post on X, 25 April 2025
+  https://x.com/karpathy/status/1915581920022585597
+
+--------------------------------------------------------------------------------

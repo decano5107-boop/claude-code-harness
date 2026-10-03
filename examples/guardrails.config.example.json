@@ -1,0 +1,27 @@
+{
+  "$comment": "Copy to guardrails.config.json. It is looked for in three places, first match wins: the path in the GUARDRAILS_CONFIG environment variable, then the session's working directory, then hooks/ next to guardrails.mjs. Universal rules — secrets in git, destructive history rewrites — are built in and always apply; this file only adds project-specific friction. Only 'ask' and 'deny' exist: the hook never auto-approves anything.",
+  "projects": [
+    {
+      "match": "my-agent-app",
+      "rules": [
+        { "when": "npm\\s+run\\s+test:e2e:live",
+          "decision": "ask",
+          "why": "Runs the suite against LIVE model calls (costs real money). The zero-cost path is test:e2e:recorded, which replays saved fixtures. Confirm before spending." },
+        { "when": "git\\s+push\\b[^|;&]*\\bmain\\b",
+          "decision": "ask",
+          "why": "Pushing main triggers the production deploy. Outward-facing — confirm before promoting." }
+      ]
+    },
+    {
+      "match": "local-data-stack",
+      "rules": [
+        { "when": "docker\\s+compose\\b[^|;&]*\\bdown\\b[^|;&]*(-v\\b|--volumes\\b)",
+          "decision": "deny",
+          "why": "down -v DELETES the local volumes. Irreversible — back it up or run it yourself." },
+        { "when": "\\b(db:reset|db:migrate|db:seed)\\b",
+          "decision": "ask",
+          "why": "Touches the local database schema or data. Confirm before mutating." }
+      ]
+    }
+  ]
+}

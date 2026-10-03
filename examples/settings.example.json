@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "deny": [
+      "Edit(~/.claude/harness-state/**)",
+      "Write(~/.claude/harness-state/**)",
+      "Edit(~/.claude/harness.config.json)",
+      "Write(~/.claude/harness.config.json)"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "claude-code-harness",
+  "displayName": "Claude Code Harness",
+  "version": "0.2.0",
+  "description": "Spec, independent critic, and the gates that enforce them: a spec skill, a verifier command with an adversarial critic agent, a Stop hook that blocks an unreviewed deliverable, and PreToolUse guardrails for destructive shell commands and AWS writes.",
+  "author": {
+    "name": "Diego Cano"
+  },
+  "homepage": "https://github.com/decano5107-boop/claude-code-harness",
+  "license": "Apache-2.0",
+  "keywords": [
+    "claude-code-plugin",
+    "claude-code-hooks",
+    "spec-driven-development",
+    "verification",
+    "guardrails"
+  ]
+}

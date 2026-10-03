@@ -1,0 +1,35 @@
+{
+  "harness": {
+    "state_dir": "~/.claude/harness-state"
+  },
+  "exit_gate": {
+    "critic_agents": ["spec-critic"],
+    "max_words": 250,
+    "max_blocks": 3,
+    "require_critic": true,
+    "require_brief": true
+  },
+  "deliverables": {
+    "min_bytes": 700
+  },
+  "prompt_start": {
+    "log_prompts": false,
+    "glossary": { "cloud code": "Claude Code" }
+  },
+  "aws_guard": {
+    "allow_extra": [],
+    "ask_extra": [],
+    "allow_model_invocation": true
+  },
+  "alias_contract": {
+    "global_file": "~/.claude/ALIASES.md",
+    "trust_project_contracts": false
+  },
+  "audience_check": {
+    "threshold": 3,
+    "names": []
+  },
+  "plugin_drift": {
+    "sources": {}
+  }
+}

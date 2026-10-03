@@ -1,0 +1,7 @@
+.DS_Store
+__pycache__/
+*.pyc
+harness.config.json
+guardrails.config.json
+node_modules/
+*.log

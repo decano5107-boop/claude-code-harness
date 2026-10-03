@@ -1,0 +1,18 @@
+{
+  "name": "claude-code-harness",
+  "owner": {
+    "name": "Diego Cano"
+  },
+  "metadata": {
+    "description": "Claude Code Harness: spec, independent critic, and gates that enforce them.",
+    "version": "0.2.0"
+  },
+  "plugins": [
+    {
+      "name": "claude-code-harness",
+      "source": "./",
+      "version": "0.2.0",
+      "description": "Spec skill, verifier command and critic agent, exit gate, and command guardrails."
+    }
+  ]
+}
